@@ -17,7 +17,7 @@ app.get("/api/pokemon/:id",(req,res)=>{
   const results = {
     "pokemon" : {
       //id : pokemon[req.params.id],
-      id : req.params.id,
+      id : Number(req.params.id),
       name : pokemon[req.params.id].name,                      
       sprite : pokemon[req.params.id].url
     }
