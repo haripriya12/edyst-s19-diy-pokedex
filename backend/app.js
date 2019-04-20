@@ -19,7 +19,7 @@ app.get("/api/pokemon/:id",(req,res)=>{
       //id : pokemon[req.params.id],
       id : Number(req.params.id),
       name : pokemon[req.params.id].name,                      
-      sprite : pokemon[req.params.id].url
+      sprite : pokemon[req.params.id].sprite
     }
   }
   //sending responce in json formate
