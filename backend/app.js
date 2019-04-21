@@ -8,13 +8,13 @@ const app = express();
 const pokemon = require('./pokemon_data.json');
 
 // CallBack function which get executed when path (api/pokemon) is matched..
-app.get("/api/pokemon/:id",(req,res)=>{
+app.get('/api/pokemon/:id',(req,res)=>{
   if(!pokemon[req.params.id]){
     res.status(404).send({error : "you entered pokemon was not found"});
     //returning router....
     return;
   }
-  const results = {
+  var results = {
     "pokemon" : {
       //id : pokemon[req.params.id],
       id : Number(req.params.id),
