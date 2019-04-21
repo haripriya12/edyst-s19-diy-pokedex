@@ -25,6 +25,10 @@ app.get('/api/pokemon/:id',(req,res)=>{
   //sending responce in json formate
   res.send(results);
 })
+
+app.get('/*', (req,res)=>{
+  res.status(404).send({erroe : "please, enter the valid url"});
+})
 app.listen(8006, () =>{
   console.log("listening on port 8006");
 });
